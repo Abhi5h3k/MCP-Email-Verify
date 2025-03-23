@@ -1,0 +1,25 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - abstractApiKey
+    properties:
+      abstractApiKey:
+        type: string
+        description: The API key for the Abstract API used for email validation.
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => ({
+      command: 'python',
+      args: ['server.py'],
+      env: {
+        ABSTRACT_API_KEY: config.abstractApiKey
+      }
+    })
+  exampleConfig:
+    abstractApiKey: your_actual_api_key_here
