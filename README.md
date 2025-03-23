@@ -1,4 +1,5 @@
 # MCP Email Verify  
+[![smithery badge](https://smithery.ai/badge/@Abhi5h3k/mcp-email-verify)](https://smithery.ai/server/@Abhi5h3k/mcp-email-verify)
 
 A lightweight **Model Context Protocol (MCP)** server that enables your LLM to validate email addresses. This tool checks email format, domain validity, and deliverability using the AbstractAPI Email Validation API. Perfect for integrating email validation into AI applications like Claude Desktop.  
 
